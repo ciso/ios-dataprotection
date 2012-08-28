@@ -205,11 +205,9 @@ public class Main {
 		    }		
 			
 		} catch (PropertyListException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.err.println("Exception: " + e.getMessage());
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.err.println("Exception: " + e.getMessage());
 		}
 		
 		
@@ -231,11 +229,9 @@ public class Main {
 		    }		
 			
 		} catch (PropertyListException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.err.println("Exception: " + e.getMessage());
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.err.println("Exception: " + e.getMessage());
 		}
 		return ret;
 	}
@@ -257,11 +253,9 @@ public class Main {
 		    }		
 			
 		} catch (PropertyListException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.err.println("Exception: " + e.getMessage());
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.err.println("Exception: " + e.getMessage());
 		}
 		return ret;
 	}
