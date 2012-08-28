@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/12/trunk/src/iphonestalker/util/io
+END
+MBUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/8/trunk/src/iphonestalker/util/io/MBUtils.java
+END
+VersionCheck.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/12/trunk/src/iphonestalker/util/io/VersionCheck.java
+END
+MBDBReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/8/trunk/src/iphonestalker/util/io/MBDBReader.java
+END
+MBDXReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/8/trunk/src/iphonestalker/util/io/MBDXReader.java
+END
+InfoReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/8/trunk/src/iphonestalker/util/io/InfoReader.java
+END
