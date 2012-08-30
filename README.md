@@ -20,7 +20,18 @@ and **iPad 3**. All devices had at least iOS 5.1.
 **Click [here](https://github.com/downloads/ciso/ios-dataprotection/dataprotection.jar) to download an executable jar file hosted on GitHub.**
 
 ## Usage
-...
+You can clone this project using git and compile it yourself or simply download 
+the executable from [this link](https://github.com/downloads/ciso/ios-dataprotection/dataprotection.jar).
+
+After successfully downloading the binary you have to use your command window or terminal to 
+start this application.
+
+Switch into the folder where you have stored the binary.
+> > cd ~/Downloads
+
+Then execute the jar file.
+> > java -jar ./dataprotection.jar
+
 
 
 
