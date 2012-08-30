@@ -21,13 +21,9 @@ Usage
 
 
 
-Data Protection
----------------
+## Data Protection Classes
 
-
-### Protection Classes
-
-## Complete Protection
+### Complete Protection
 The so-called class key is derived from the user’s passcode and the unique device identifier. 
 Immediately after the user locks the device, the class key is discarded. 
 This means that all files in this class become inaccessible until the 
@@ -35,7 +31,7 @@ user unlocks the device again. For example, Apple’s Mail App that
 protects all messages and the corresponding attachments using 
 Complete Protection uses this class.
 
-## Protect Unless Open
+### Protect Unless Open
 This protection class is used when a file needs to be written while 
 the device is locked by a passcode. This is commonly used when something 
 is processed in the background. For example, when a mail attachment is downloaded 
@@ -51,13 +47,13 @@ wants to open the file again, the shared secret is re- created using the same
 private key. The hash of it is then used to unwrap the per-file key, which 
 in turn is used to decrypt the file.
 
-## Protect Until First User Authentication
+### Protect Until First User Authentication
 Basically, this class has the same behavior as 
 the Complete Protection class, except that the class key is not wiped 
 from memory when the device is locked. The benefit of this class is that 
 the file remains encrypted even when the device is rebooted.
 
-## No Protection
+### No Protection
 When this class is used, 
 the file is only protected using the device’s unique identifier. 
 Additionally, it is stored in the effaceable storage section of the memory. 
