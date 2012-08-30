@@ -24,10 +24,10 @@ Usage
 ## Data Protection Classes
 
 ### Complete Protection
-The so-called class key is derived from the user’s passcode and the unique device identifier. 
+The so-called class key is derived from the user's passcode and the unique device identifier. 
 Immediately after the user locks the device, the class key is discarded. 
 This means that all files in this class become inaccessible until the 
-user unlocks the device again. For example, Apple’s Mail App that 
+user unlocks the device again. For example, Apple's Mail App that 
 protects all messages and the corresponding attachments using 
 Complete Protection uses this class.
 
@@ -38,7 +38,7 @@ is processed in the background. For example, when a mail attachment is downloade
 in the background. The protection class uses asymmetric elliptic curve cryptography 
 to achieve this. Additionally, with the usual per-file key, Data Protection generates 
 a unique public-private key pair. Then a so- called shared secret is created using the 
-file’s key and the public key of the particular protection class. The user’s passcode 
+file's key and the public key of the particular protection class. The user’s passcode 
 and device identifier protect the private key of the class. In fact, the per-file 
 key and a unique hash of the aforementioned shared secret is stored in the file’s 
 metadata along with the public key. Both, the corresponding private key and the 
@@ -49,13 +49,13 @@ in turn is used to decrypt the file.
 
 ### Protect Until First User Authentication
 Basically, this class has the same behavior as 
-the Complete Protection class, except that the class key is not wiped 
+the **Complete Protection class**, except that the class key is not wiped 
 from memory when the device is locked. The benefit of this class is that 
 the file remains encrypted even when the device is rebooted.
 
 ### No Protection
 When this class is used, 
-the file is only protected using the device’s unique identifier. 
+the file is only protected using the device's unique identifier. 
 Additionally, it is stored in the effaceable storage section of the memory. 
 This is the default class for all files that were not specified with any 
 of the aforementioned protection classes. Due to the fact that the entire 
