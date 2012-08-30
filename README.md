@@ -16,8 +16,11 @@ installed and at least one backup has been made of an iOS device.
 We have tested it with backups from **iPhone 4S**, **iPad 2** 
 and **iPad 3**. All devices had at least iOS 5.1.
 
-Usage
------
+## Download Executable jar File
+https://github.com/downloads/ciso/ios-dataprotection/dataprotection.jar
+
+## Usage
+...
 
 
 
