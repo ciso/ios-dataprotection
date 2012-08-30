@@ -45,13 +45,15 @@ public class Main {
 		if (isMac()) {
 			pathToBackupDirectory = "/Users/" + username + "/Library/Application Support/MobileSync/Backup/";
 		} else if (isWindows()) {
-			pathToBackupDirectory = "C:\\Users\\user\\AppData\\Roaming\\Apple Computer\\MobileSync\\Backup\\";
+			pathToBackupDirectory = "C:\\Users\\" + username + "\\AppData\\Roaming\\Apple Computer\\MobileSync\\Backup\\";
 		} else if (isUnix()) {
 			pathToBackupDirectory = ""; //TODO !!!
 		} else {
 			System.out.println("Your OS is not supported!");
 			isOSSupported = false;
 		}
+		
+		System.out.println("Backup path: " + pathToBackupDirectory);
 		
 		File backupDirectory = new File(pathToBackupDirectory);
 		if (backupDirectory.isDirectory()) {
