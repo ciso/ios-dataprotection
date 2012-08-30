@@ -26,14 +26,36 @@ the executable from [this link](https://github.com/downloads/ciso/ios-dataprotec
 After successfully downloading the binary you have to use your command window or terminal to 
 start this application.
 
-Switch into the folder where you have stored the binary.
+Switch into the folder where you have stored the binary. (For example, I have stored it into my downloads folder)
 > cd ~/Downloads
 
 Then execute the jar file.
 > java -jar ./dataprotection.jar
 
+Then you should see something like that:
+> Backup path: /Users/christofstromberger/Library/Application Support/MobileSync/Backup/
+> [1] IAIK iPhone 4S (28.08.2012 09:00)
+> [2] IAIK iPad Dev #1 (23.07.2012 12:57)
+> [3] IAIK iPhone (28.08.2012 09:16)
+> [4] iPad von Christof (20.11.2011 23:13)
+> [5] Christof's iPhone (29.08.2012 13:50)
+> Choose a backup: 
 
+Now you have to choose your backup which you want to analyze.
+> Choose a backup: 5
 
+Then the application asks you if you want to store the results on your desktop. (Mac OS X location)
+> Shall we store it on your desktop? If not, provide a path.
+> '> 
+
+When you just hit enter, the application will store it on your desktop.
+> Okay, we will store it to /Users/christofstromberger/Desktop/analysis.csv
+> Extracting and decrypting your backup
+> Creating output file in csv format
+> 3582/3582 Files extracted
+> Finished
+
+Finally, you should have an **analysis.csv** file on your desktop.
 
 ## Data Protection Classes
 
