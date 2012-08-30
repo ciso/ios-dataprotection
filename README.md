@@ -17,7 +17,7 @@ We have tested it with backups from **iPhone 4S**, **iPad 2**
 and **iPad 3**. All devices had at least iOS 5.1.
 
 ## Download Executable jar File
-https://github.com/downloads/ciso/ios-dataprotection/dataprotection.jar
+**Click [here](https://github.com/downloads/ciso/ios-dataprotection/dataprotection.jar) to download an executable jar file hosted on GitHub.**
 
 ## Usage
 ...
