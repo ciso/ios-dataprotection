@@ -33,7 +33,7 @@ Then execute the jar file.
 > java -jar ./dataprotection.jar
 
 Then you should see something like that:
-> Backup path: /Users/christofstromberger/Library/Application Support/MobileSync/Backup/  
+> Backup path: /Users/christof/Library/Application Support/MobileSync/Backup/  
 > [1] IAIK iPhone 4S (28.08.2012 09:00)  
 > [2] IAIK iPad Dev #1 (23.07.2012 12:57)  
 > [3] IAIK iPhone (28.08.2012 09:16)  
@@ -49,7 +49,7 @@ Then the application asks you if you want to store the results on your desktop. 
 > '> 
 
 When you just hit enter, the application will store it on your desktop.
-> Okay, we will store it to /Users/christofstromberger/Desktop/analysis.csv  
+> Okay, we will store it to /Users/christof/Desktop/analysis.csv  
 > Extracting and decrypting your backup  
 > Creating output file in csv format  
 > 3582/3582 Files extracted  
