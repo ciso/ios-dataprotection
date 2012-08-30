@@ -8,6 +8,23 @@ This application has been developed by Christof Stromberger and Peter Teufl
 at the Institute for Applied Information Processing and Communications 
 at the Graz University of Technology.
 
+### Why is it important to know the protection class of a particular file?
+
+Let's consider you have received some important files by email. Generally, 
+Apple stores your email attachments securely using data protection. But 
+often the user opens the file in another app. Let's assume we have received 
+a PDF file with our username and password for enterprise VPN access. We open 
+this email and open the PDF in our favorite **PDF Reader App**. Then this file 
+is stored in the documents folder of the **PDF Reader App** and not in the 
+email attachments folder. Although your files are protected as attachments, 
+these files you open in another application, such as the **PDF Reader App**, 
+may not.
+
+This is why it is important to know which protection classes are used by 
+your installed applications.
+
+
+
 Supported Devices
 ----------------
 This application should work on OS X and Windows machines where iTunes is 
