@@ -27,10 +27,10 @@ After successfully downloading the binary you have to use your command window or
 start this application.
 
 Switch into the folder where you have stored the binary.
-> > cd ~/Downloads
+> cd ~/Downloads
 
 Then execute the jar file.
-> > java -jar ./dataprotection.jar
+> java -jar ./dataprotection.jar
 
 
 
