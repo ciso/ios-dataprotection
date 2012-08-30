@@ -101,6 +101,10 @@ the device itself. Otherwise, when the user performs a wipe this file
 becomes inaccessible very fast because of the fact that the decryption 
 key is stored in the effaceable storage section.
 
-License
-------------
+## License
 ...
+
+
+## Special Thanks to
+- [Property List Editor](http://sourceforge.net/projects/plist/files/lib/) on Sourceforge
+- [iPhoneStalker](http://code.google.com/p/iphonestalker/) on Google code
