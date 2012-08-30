@@ -49,7 +49,7 @@ public class Main {
 		} else if (isUnix()) {
 			pathToBackupDirectory = ""; //TODO !!!
 		} else {
-			System.out.println("Your OS is not supported!!");
+			System.out.println("Your OS is not supported!");
 			isOSSupported = false;
 		}
 		
@@ -79,7 +79,11 @@ public class Main {
 		    String input = in.nextLine();
 		    int chosenIndex = Integer.parseInt(input)-1;
 		    
-		    //TODO check for encrypted backups !!!
+		    if (chosenIndex > files.length) {
+				System.out.print("Input not valid! Please start the application again!");
+				return;
+		    }
+		    
 		    pathToBackup = files[chosenIndex].getAbsolutePath();
 		}
 		
