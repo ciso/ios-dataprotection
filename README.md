@@ -37,8 +37,8 @@ Relevant references:
 * Andrey Belenko, Dmitry Sklyarov: [Evolution of iOS Data Protection and iPhone Forensics:
 from iPhone OS to iOS 5](https://media.blackhat.com/bh-ad-11/Belenko/bh-ad-11-Belenko-iOS_Data_Protection.pdf)
 * Trail of Bits - Dino A. Dai Zovi: 
-                ** Paper: [Apple iOS 4 Security Evaluation](http://www.trailofbits.com/resources/ios4_security_evaluation_paper.pdf)
-                ** Slides: [Apple iOS 4 Security Evaluation](http://www.trailofbits.com/resources/ios4_security_evaluation_slides.pdf)
+               * Paper: [Apple iOS 4 Security Evaluation](http://www.trailofbits.com/resources/ios4_security_evaluation_paper.pdf)
+               * Slides: [Apple iOS 4 Security Evaluation](http://www.trailofbits.com/resources/ios4_security_evaluation_slides.pdf)
 Supported Devices
 ----------------
 This application should work on OS X and Windows machines where iTunes is 
