@@ -117,8 +117,11 @@ Issues
 There is one issue with this tool: Since only the backups are analyzed, only those applications and files can be analyzed that are marked by the app developer for backup (which is the default setting). Other files, e.g. temporary files, that are not marked for backup cannot be extracted. Thus, it might be possible that an application has additional files (e.g. temporary files) with non-secure protection classes, which are not shown by the tool.
 
 ## License
-This tool is licensed under the LGPL. Some of the code was taken from the projects mentioned below. These parts are marked within the source code files.
+This tool is licensed under the GPL. Some of the code was taken from the projects mentioned below. These parts are marked within the source code files.
 
+## Contact
+- Peter Teufl, peter [dot] teufl [at] iaik [dot] tugraz [dot] at
+- Christof Stromberger, stromberger [at] student [dot] tugraz [dot] at
 
 ## Special Thanks to
 - [Property List Editor](http://sourceforge.net/projects/plist/files/lib/) on Sourceforge
