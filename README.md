@@ -32,8 +32,13 @@ your installed applications.
 
 Relevant references:
 * Apple developer documentation: [iOS Security](http://images.apple.com/ipad/business/docs/iOS_Security_May12.pdf)
-* Jean-Baptiste B ́edru ,Jean Sigwald :[iPhone data protection in depth](http://esec-lab.sogeti.com/dotclear/public/publications/11-hitbamsterdam-iphonedataprotection.pdf)
-
+* Jean-Baptiste Bedru, Jean Sigwald: [iPhone data protection in depth](http://esec-lab.sogeti.com/dotclear/public/publications/11-hitbamsterdam-iphonedataprotection.pdf)
+* Elcomsoft: [Elcomsoft iOS Forensic Toolkot](http://www.elcomsoft.co.uk/eift.html)
+* Andrey Belenko, Dmitry Sklyarov: [Evolution of iOS Data Protection and iPhone Forensics:
+from iPhone OS to iOS 5](https://media.blackhat.com/bh-ad-11/Belenko/bh-ad-11-Belenko-iOS_Data_Protection.pdf)
+* Trail of Bits - Dino A. Dai Zovi: 
+                ** Paper: [Apple iOS 4 Security Evaluation](http://www.trailofbits.com/resources/ios4_security_evaluation_paper.pdf)
+                ** Slides: [Apple iOS 4 Security Evaluation](http://www.trailofbits.com/resources/ios4_security_evaluation_slides.pdf)
 Supported Devices
 ----------------
 This application should work on OS X and Windows machines where iTunes is 
