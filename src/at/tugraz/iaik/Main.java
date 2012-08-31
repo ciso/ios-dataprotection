@@ -53,7 +53,7 @@ public class Main {
 			isOSSupported = false;
 		}
 		
-		System.out.println("Backup path: " + pathToBackupDirectory);
+		//System.out.println("Backup path: " + pathToBackupDirectory);
 		
 		File backupDirectory = new File(pathToBackupDirectory);
 		if (backupDirectory.isDirectory()) {
@@ -89,7 +89,7 @@ public class Main {
 		    pathToBackup = files[chosenIndex].getAbsolutePath();
 		}
 		
-		Scanner inputScanner = new Scanner(System.in);
+		/*Scanner inputScanner = new Scanner(System.in);
 		System.out.println("Shall we store it on your desktop? If not, provide a path.");
 		System.out.print("> ");
 	    String input = inputScanner.nextLine();
@@ -99,10 +99,9 @@ public class Main {
 	    }
 	    else {
 	    	pathToOutputFile = input;
-	    }
+	    }*/
 	    System.out.println("Okay, we will store it to " + pathToOutputFile);
 		
-		//ABORT IF OS IS NOT SUPPORTED OR THE BACKUPS IS ENCRYPTED
 		//check if the os is supported
 		if (!isOSSupported) {
 			System.out.println("Error: Your OS is not supported. We support only Mac, Windows and Linux.");
@@ -117,8 +116,6 @@ public class Main {
 			System.out.println("Your backup is encrypted. We are going to decrypt it temporary.");
 		}
 
-		
-		
 		File manifestFile = new File(pathToBackup + "/" + pathToManifestFile);
 
 		// allocate mbdb reader
