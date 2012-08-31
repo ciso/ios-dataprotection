@@ -30,7 +30,9 @@ such as the **PDF Reader App**, may not.
 This is why it is important to know which protection classes are used by 
 your installed applications.
 
-
+Relevant references:
+* Apple developer documentation: [iOS Security](http://images.apple.com/ipad/business/docs/iOS_Security_May12.pdf)
+* Jean-Baptiste B ́edru ,Jean Sigwald :[iPhone data protection in depth](http://esec-lab.sogeti.com/dotclear/public/publications/11-hitbamsterdam-iphonedataprotection.pdf)
 
 Supported Devices
 ----------------
