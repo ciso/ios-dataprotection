@@ -5,7 +5,7 @@ Introduction
 ------------
 
 This application has been developed by Christof Stromberger and Peter Teufl 
-at the Institute for Applied Information Processing and Communications 
+at the [Institute for Applied Information Processing and Communications](http://www.iaik.at) 
 at the Graz University of Technology.
 
 ### Why is it important to know the protection class of a particular file?
@@ -91,9 +91,9 @@ is processed in the background. For example, when a mail attachment is downloade
 in the background. The protection class uses asymmetric elliptic curve cryptography 
 to achieve this. Additionally, with the usual per-file key, Data Protection generates 
 a unique public-private key pair. Then a so- called shared secret is created using the 
-file's key and the public key of the particular protection class. The userÕs passcode 
+file's key and the public key of the particular protection class. The userï¿½s passcode 
 and device identifier protect the private key of the class. In fact, the per-file 
-key and a unique hash of the aforementioned shared secret is stored in the fileÕs 
+key and a unique hash of the aforementioned shared secret is stored in the fileï¿½s 
 metadata along with the public key. Both, the corresponding private key and the 
 per-file key are wiped from the memory when the file is closed. When the user 
 wants to open the file again, the shared secret is re- created using the same 
