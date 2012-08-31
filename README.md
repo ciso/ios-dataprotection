@@ -8,6 +8,11 @@ This application has been developed by Christof Stromberger and Peter Teufl
 at the [Institute for Applied Information Processing and Communications](http://www.iaik.at) 
 at the Graz University of Technology.
 
+###iOS Encryption
+iOS uses two encryption systems that protect your data:
+*Device encryption: This system encrypts the whole iOS-filesystem and is not linked to your passcode. Thus, by jailbreaking the device an attacker gains access to the filesystem.
+*Data Protection: This system was introduced in iOS4 and protects files via keys that are protected themselves via a key that is derived from the passcode and the AES key which is stored on a chip on the device. The application developer must specidy
+
 ### Why is it important to know the protection class of a particular file?
 
 Let's consider you have received some important files by email. Generally, 
