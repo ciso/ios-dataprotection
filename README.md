@@ -17,10 +17,10 @@ Thus, DataProtection - when a good passcode is chosen - offers a pretty secure w
 
 ### Why is it important to know the protection class of a particular file?
 
-By chosing an adequate passcode, DataProtection offers good protection. Unfortunately, this protection depends on the application developer, who decides which files need to be protected. Let's consider you have received some important files by email. The pre-installed mail application of Apple secures your received mails and attachment via adequate data protection settings. However, when the attachments are opened in another application (e.g. a PDF reader), which might store the files in its own directory, the protection completely on the data protection choices the developer has made. If no protection class was chosen, then the files are only encrypted with the device encryption system, which can be attacked by jailbreaking the device.
+By chosing an adequate passcode, DataProtection offers good protection. Unfortunately, this protection depends on the application developer, who decides which files need to be protected. Let's consider you have received some important files by email. The pre-installed mail application of Apple secures your received mails and attachment via adequate data protection settings. However, when the attachments are opened in another application (e.g. a PDF reader), which might store the files in its own directory, the protection completely depends on the data protection choices the app developer has made. If no protection class was chosen, then the files are only encrypted with the device encryption system, which can be attacked by jailbreaking the device. Thus, the lose the high protection class of the mail application. The user/administrator is not able to recognize this.
 
 This is why it is important to know which protection classes are used by 
-your installed applications. Since it is not possible for the user, or the system administrator to determine which protection classes are used for each application, this tool was created.
+your installed applications. In order to allow the user or the system administrator to determine which protection classes are used for each application, the presented tool was created.
 
 Relevant references:
 * Apple developer documentation: [iOS Security](http://images.apple.com/ipad/business/docs/iOS_Security_May12.pdf)
@@ -32,9 +32,9 @@ from iPhone OS to iOS 5](https://media.blackhat.com/bh-ad-11/Belenko/bh-ad-11-Be
   * Paper: [Apple iOS 4 Security Evaluation](http://www.trailofbits.com/resources/ios4_security_evaluation_paper.pdf)
   * Slides: [Apple iOS 4 Security Evaluation](http://www.trailofbits.com/resources/ios4_security_evaluation_slides.pdf)
 
-Dataprotection tool
+DataProtection tool
 ----------------
-The idea of the dataprotection tool is simple: iIOS backups which are carried out by iTunes store meta-information that allows to extract the protection classes for the files within the backup. Thus, the tool analyzes an iTunes backup, extracts the protection classes and stores the extracted information in a simple csv file. This allows the user, or in most cases the administrator) to analyze whether an application uses adequate protection.
+The idea of the dataprotection tool is simple: iIOS backups which are carried out by iTunes store meta-information that allows to extract the protection classes for the files within the backup. Thus, the tool analyzes an iTunes backup, extracts the protection classes and stores the extracted information in a simple csv file. This allows the user, (or in most cases the administrator) to analyze whether an application uses adequate protection classes.
 The tool is based on prior work (see the end of this document), which was modified to achieve the desired goals.
 
 
@@ -102,35 +102,22 @@ user unlocks the device again. For example, Apple's Mail App that
 protects all messages and the corresponding attachments using this protection class.
 
 ### Protect Unless Open
-This protection class is used when a file needs to be written while 
-the device is locked by a passcode. This is commonly used when something 
-is processed in the background. For example, when a mail attachment is downloaded 
-in the background. The protection class uses asymmetric elliptic curve cryptography 
-to achieve this. Additionally, with the usual per-file key, Data Protection generates 
-a unique public-private key pair. Then a so- called shared secret is created using the 
-file's key and the public key of the particular protection class. The user�s passcode 
-and device identifier protect the private key of the class. In fact, the per-file 
-key and a unique hash of the aforementioned shared secret is stored in the file�s 
-metadata along with the public key. Both, the corresponding private key and the 
-per-file key are wiped from the memory when the file is closed. When the user 
-wants to open the file again, the shared secret is re- created using the same 
-private key. The hash of it is then used to unwrap the per-file key, which 
-in turn is used to decrypt the file.
+This class allows to keep the keys in the device memory when the device is locked until the files are closed by the application. Also, due to the deployment of assymetric cryptography, this class allows an application to create protected files, even when the device is locked, and thus the symmetric class keys are not available.
 
 ### Protect Until First User Authentication
 Basically, this class has the same behavior as 
 the **Complete Protection class**, except that the class key is not wiped 
-from memory when the device is locked. It remains within the device memory until the device is rebooted. Although this is less secure then the complete protection class, it offers good protection in case an attacker applies a jailbreak that requires a reboot. After this reboot the files cannot be accessed anymore without knowing the passcode.
+from memory when the device is locked. It remains within the device memory until the device is rebooted. Although this is less secure then the complete protection class, it still offers good protection in case an attacker applies a jailbreak that requires a reboot. After this reboot the files cannot be accessed anymore without knowing the passcode.
 
 ### No Protection
 While files using this class are still encrypted via the device encryption, this encryption does not depend on the passcode of the user. Thus, when an attacker applies a jailbreak to gain access to the operating system, the operating system decrypts the data and allows access to the files with this class.
 
 Issues
 -------------
-There is one issue with this tool: Since only the backups are analyzed, only those applications and files can be analyzed that are marked for backup (which is the default setting). Other files, e.g. temporary files, that are not marked for backup, cannot be extracted. Thus, it might be possible that an application has additional files with non-secure protection classes, which are not shown by the tool.
+There is one issue with this tool: Since only the backups are analyzed, only those applications and files can be analyzed that are marked by the app developer for backup (which is the default setting). Other files, e.g. temporary files, that are not marked for backup cannot be extracted. Thus, it might be possible that an application has additional files (e.g. temporary files) with non-secure protection classes, which are not shown by the tool.
 
 ## License
-...
+This tool is licensed under the LGPL. Some of the code was taken from the projects mentioned below. These parts are marked within the source code files.
 
 
 ## Special Thanks to
