@@ -120,8 +120,8 @@ There is one issue with this tool: Since only the backups are analyzed, only tho
 This tool is licensed under the GPL. Some of the code was taken from the projects mentioned below. These parts are marked within the source code files.
 
 ## Contact
-- Peter Teufl, peter [dot] teufl [at] iaik [dot] tugraz [dot] at
-- Christof Stromberger, stromberger [at] student [dot] tugraz [dot] at
+- Peter Teufl, peter.teufl@iaik.tugraz.at
+- Christof Stromberger, stromberger@student.tugraz.at
 
 ## Special Thanks to
 - [Property List Editor](http://sourceforge.net/projects/plist/files/lib/) on Sourceforge
