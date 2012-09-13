@@ -92,6 +92,9 @@ This file contains the following information:
 * Protection classes of the analyzed files: Here you should lookout for the class **NSProtectionNone** which indicates that the file is only protected via device encryption.
 
 
+### Screenshot ###
+<img src="http://cstromberger.at/screenshot_analysis.csv.png" alt="Sample Screenshot" />
+
 ## Data Protection Classes
 This section gives an overview about the deployed protection classes. For detailed information look up the Apple developer documentation.
 
