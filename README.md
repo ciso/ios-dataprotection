@@ -119,7 +119,6 @@ There is one issue with this tool: Since only the backups are analyzed, only tho
 ## License
 This tool is licensed under the MIT License. Some of the code was taken from the projects mentioned below. These parts are marked within the source code files.
 
-Copyright (c) 2012 Christof Stromberger
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
