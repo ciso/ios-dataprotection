@@ -4,9 +4,6 @@ iOS Dataprotection Viewer
 Introduction
 ------------
 
-This application has been developed by Christof Stromberger and Peter Teufl 
-at the [Institute for Applied Information Processing and Communications](http://www.iaik.at) 
-at the Graz University of Technology.
 
 ###iOS Encryption
 iOS uses two encryption systems that protect your data (for detailed information lookup the references below):
@@ -130,9 +127,6 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-## Contact
-- Peter Teufl, peter.teufl@iaik.tugraz.at
-- Christof Stromberger, stromberger@student.tugraz.at
 
 ## Special Thanks to
 - [Property List Editor](http://sourceforge.net/projects/plist/files/lib/) on Sourceforge
