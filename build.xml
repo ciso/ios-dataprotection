@@ -1,0 +1,47 @@
+<project name="iOS-DataProtection" default="jar" basedir=".">
+    <property name="src.dir"     value="src" />
+    <property name="build.dir"   value="build" />
+    <property name="classes.dir" value="${build.dir}/classes" />
+    <property name="lib.dir"     value="libs" />
+    <property name="jar.file"    value="${build.dir}/ios-dataprotection.jar" />
+
+    <!-- Define the classpath which includes the property-list.jar and the classes after compiling -->
+    <path id="build.classpath">
+        <fileset dir="${lib.dir}">
+            <include name="**/*.jar" />
+        </fileset>
+        <pathelement path="${classes.dir}"/>
+    </path>
+
+    <!-- Deletes the existing build directory -->
+    <target name="clean">
+        <delete dir="${build.dir}" />
+    </target>
+
+    <!-- Creates the  build directory -->
+    <target name="makedir">
+        <mkdir dir="${classes.dir}" />
+    </target>
+
+    <!-- Compiles the java code -->
+    <target name="compile" depends="clean, makedir">
+        <javac srcdir="${src.dir}" includeantruntime="false" destdir="${classes.dir}">
+            <classpath refid="build.classpath" />
+        </javac>
+    </target>
+
+    <!-- Creates the deployable jar file  -->
+    <target name="jar" depends="compile">
+        <echo>The .jar file can be found in '${build.dir}' afterwards</echo>
+        <manifestclasspath property="jar.classpath" jarfile="${jar.file}">
+            <classpath refid="build.classpath" />
+        </manifestclasspath>
+        <jar destfile="${jar.file}" basedir="${classes.dir}">
+            <zipgroupfileset dir="${lib.dir}" includes="**/*.jar" />
+            <manifest>
+                <attribute name="Main-Class" value="at.tugraz.iaik.Main" />
+                <attribute name="Class-Path" value="${jar.classpath}" />
+            </manifest>
+        </jar>
+    </target>
+</project>
