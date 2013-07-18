@@ -4,9 +4,6 @@ iOS Dataprotection Viewer
 Introduction
 ------------
 
-This application has been developed by Christof Stromberger and Peter Teufl 
-at the [Institute for Applied Information Processing and Communications](http://www.iaik.at) 
-at the Graz University of Technology.
 
 ###iOS Encryption
 iOS uses two encryption systems that protect your data (for detailed information lookup the references below):
@@ -47,6 +44,52 @@ and **iPad 3**. All devices had at least iOS 5.1.
 
 ## Download Executable jar File
 **Click [here](https://github.com/downloads/ciso/ios-dataprotection/dataprotection.jar) to download an executable jar file hosted on GitHub.**
+
+## Building
+You can build this project by simply invoking `ant` in the root directory of the project. The default is to build a `.jar` file.
+
+```
+% ant
+Buildfile: ios-dataprotection/build.xml
+
+makedir:
+    [mkdir] Created dir: ios-dataprotection/build/classes
+
+compile:
+    [javac] Compiling 3 source files to ios-dataprotection/build/classes
+
+jar:
+     [echo] The .jar file can be found in 'build' afterwards
+      [jar] Building jar: ios-dataprotection/build/ios-dataprotection.jar
+
+BUILD SUCCESSFUL
+Total time: 1 second
+```
+
+### Proguard
+If you want a smaller `.jar` file there is also the option to shrink the `.jar` file. You can do this by invoking Proguard like this:
+
+```
+% proguard @ios-dataprotection.pro
+ProGuard, version 4.8
+Reading program jar [ios-dataprotection/build/ios-dataprotection.jar]
+Reading library jar [/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar]
+Preparing output jar [ios-dataprotection/build/ios-dataprotection_out.jar]
+  Copying resources from program jar [ios-dataprotection/build/ios-dataprotection.jar]
+proguard @ios-dataprotection.pro  13.98s user 0.27s system 153% cpu 9.311 total
+```
+
+At the time of writing the `.jar` is **63KB** before proguard, **29KB** afterwards.
+
+If you get this error: `Error: Can't read [/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/rt.jar] (No such file or directory)` on OS X you can fix this as shown [here](http://bruehlicke.blogspot.co.at/2009/11/missing-rtjar-mac-os-x-using-proguard.html):
+
+> On your Mac open a terminal and change directory to
+>
+> `% cd /System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home/lib`
+>
+> now just softlink to classes.jar via
+>
+> `% sudo ln -s ../../Classes/classes.jar rt.jar`
 
 ## Usage
 You can clone this project using git and compile it yourself or simply download 
@@ -92,6 +135,9 @@ This file contains the following information:
 * Protection classes of the analyzed files: Here you should lookout for the class **NSProtectionNone** which indicates that the file is only protected via device encryption.
 
 
+### Screenshot ###
+<img src="http://cstromberger.at/screenshot_analysis.csv.png" alt="Sample Screenshot" />
+
 ## Data Protection Classes
 This section gives an overview about the deployed protection classes. For detailed information look up the Apple developer documentation.
 
@@ -117,11 +163,15 @@ Issues
 There is one issue with this tool: Since only the backups are analyzed, only those applications and files can be analyzed that are marked by the app developer for backup (which is the default setting). Other files, e.g. temporary files, that are not marked for backup cannot be extracted. Thus, it might be possible that an application has additional files (e.g. temporary files) with non-secure protection classes, which are not shown by the tool.
 
 ## License
-This tool is licensed under the GPL. Some of the code was taken from the projects mentioned below. These parts are marked within the source code files.
+This tool is licensed under the MIT License. Some of the code was taken from the projects mentioned below. These parts are marked within the source code files.
 
-## Contact
-- Peter Teufl, peter.teufl@iaik.tugraz.at
-- Christof Stromberger, stromberger@student.tugraz.at
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 
 ## Special Thanks to
 - [Property List Editor](http://sourceforge.net/projects/plist/files/lib/) on Sourceforge

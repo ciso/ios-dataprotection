@@ -1,0 +1,42 @@
+# workspace settings
+*.metadata
+
+# Java class files
+*.class
+
+# generated files
+bin/
+
+build.xml
+
+ios-dataprotection.pro
+
+.idea/.name
+
+.idea/copyright/profiles_settings.xml
+
+.idea/compiler.xml
+
+.idea/encodings.xml
+
+.idea/misc.xml
+
+.idea/modules.xml
+
+.idea/scopes/scope_settings.xml
+
+.idea/uiDesigner.xml
+
+.idea/vcs.xml
+
+.idea/workspace.xml
+
+DataProtectionViewer.eml
+
+DataProtectionViewer.iml
+
+dataprotection.jar
+
+bin/at/tugraz/iaik/io/MBDBReader.class
+
+*.class
