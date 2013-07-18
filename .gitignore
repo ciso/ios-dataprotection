@@ -7,10 +7,6 @@
 # generated files
 bin/
 
-build.xml
-
-ios-dataprotection.pro
-
 .idea/.name
 
 .idea/copyright/profiles_settings.xml
